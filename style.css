@@ -20,6 +20,7 @@ body{
     background-size: cover; 
     background-repeat: no-repeat;
     position: relative;
+    overflow: hidden;
 }
 
 .world {
@@ -53,29 +54,32 @@ body{
 }
 
 .ground{
- /* --left:0; */
+--left:0; 
 position:absolute;
 width: 300%;
+height: 15%;
 bottom : 0;
-/* bottom : 0;
-left : calc(var(--left)*1%); */
+/* bottom : 0;*/
+left : calc(var(--left)*1%); 
 }
 
 .dino {
-     /* --bottom : 0; */
+    --bottom : 0; 
      position : absolute;
      left : 1%;
      height : 30%;
-     bottom: 11%;
-     /* bottom : calc(var(--bottom)*1%); */
+     /* bottom: 10%; */
+     bottom : calc(var(--bottom)*1%); 
 }
 
 .cactus{
+    --right:0;
     position : absolute;
-    /* left : calc(var(--left) * 1%); */
+    right: calc(var(--right) * 1%); 
     height : 30%;
-    left : 60%;
-    bottom: 10%;
+    /* left : 60%; */
+    bottom:3%;
+    /* bottom: 10%; */
 }
 
 
