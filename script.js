@@ -92,7 +92,7 @@ function moveCactus(){
     },20)
     
     // repeat the appearance of the cactus if the game is not over : 
-     if(!gameOver) setTimeout(moveCactus, randomTime)
+     if(!gameOver) setTimeout(moveCactus, 1000)
      else popup() // popup if the game is over
 }
 
