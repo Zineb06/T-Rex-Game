@@ -3,23 +3,40 @@
     <head>
         <meta charset = "utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scal=1.0">
+        <meta name="viewport" content="width=device-width">
         <link rel="stylesheet" href="style.css"></link>
-        <script src="script.js" ></script>
+        <script src="script.js"></script>
         <title> T-Rex Game </title>
-        <link rel = "icon" href ="icon.png" type = "image/icon">    </head>
+        <link rel = "icon" href ="imgs/icon.png" type = "image/icon">    </head>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         
     <body>
-        <div class="world" data-world>
-             <div class="scoretxt" style="font-size: 4vmin; margin-left: 3vmin;">Score :<span class="score" style="font-size: 4vmin;">&nbsp; 0 </span></div>
-            <!-- <div class="start-screen">        <button class="start btn btn-success" style="color:black;  font-size: 3.5vmin;"> Start The Game </button>  </div> -->
-            <img src="imgs/ground.png" class="ground">
-            <img src="imgs/ground.png" class="ground">
+      
+        <div class="world">
+            <button class="btn btn-warning"><a href="game.html" style="color:black; text-decoration: none; padding: 2vmin;"><b>Restart</b></a></button>
+            <div class="start-screen" id="alert"></div>
+             <div class="scoretxt" style="font-size: 4vmin;">Score :<span class="score" style="font-size: 4vmin;">&nbsp; 0 </span></div>
+            <div class="ground"></div>
             <img src="imgs/standing.png" class="dino">
-            <img src="imgs/cactus.png" class="cactus">
 
         </div>
 
+            <div class="popup" id="popup-1">
+                <div class="overlay"></div>
+                <div class="content">
+                    <div class="close-btn" onclick="popup()">&times;</div>
+                        <h1>You Lost ! </h1>
+                        <img src="imgs/Dead.png" height="200" width="280" class="gif">
+                        <p></p>
+                        <button class="btnTryAgain"> <a href="game.html">Try Again</a></button>
+                </div>
+            </div>
+
     </body>
 </html>
+
+<script>
+    function popup(){
+        document.getElementById("popup-1").classList.toggle("active");
+      }
+</script>
