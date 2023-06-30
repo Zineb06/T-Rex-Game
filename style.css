@@ -68,14 +68,28 @@ bottom : 0px;
   height: 100px;
 }
 
+
 .dino {
-    --bottom : 4; 
-     position : absolute;
+    position : absolute;
+     width : calc(1152px / 8);
+     height: 100px;
+     bottom: 7%;
      left : 7%;
-     height : 30%;
-     /* bottom: 10%; */
-     bottom : calc(var(--bottom)*1%); 
+     background : url(imgs/sprites-trex-run.png);
+     animation: run 1s steps(8) infinite;
 }
+
+@keyframes run {
+    from
+    {
+        background-position: 0;
+    }
+    to{
+        background-position: 1152px;
+    }
+}
+
+
 
 /* .cactus{
     --right:0;

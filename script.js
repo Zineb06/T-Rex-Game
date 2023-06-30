@@ -14,10 +14,12 @@ let gameOver = false
 
 startScreen.innerHTML ='Click To Start'
 ground.style.animation='none'
+dino.style.animation='none'
 
 function startGame(){
    startScreen.innerHTML =''
    ground.style.animation = 'slideright 600s infinite linear'
+   dino.style.animation = 'run 1s steps(8) infinite'
    moveCactus()
 }
 
@@ -42,6 +44,7 @@ function jump(){
         counter++
         position=position*delay
         dino.style.bottom = position + 'px'
+        dino.style.animation='none'
         // dino.style.background='red';
         //console.log(dino.style.bottom)
 
@@ -53,6 +56,7 @@ function jump(){
                 counter--
                 position=position*delay
                 dino.style.bottom = position +'px'
+                dino.style.animation = 'run 1s steps(8) infinite'
                 if(counter === 0 ){
                     clearInterval(downTime)
                     isJumping=false
